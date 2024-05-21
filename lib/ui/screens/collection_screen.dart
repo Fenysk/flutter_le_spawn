@@ -38,10 +38,8 @@ class _CollectionScreenState extends State<CollectionScreen> {
               ),
             ],
           ),
-          const Expanded(
-            child: VideoGameList(
-              items: ['1', '2', '3'],
-            ),
+          Expanded(
+            child: VideoGameList(),
           ),
         ],
       ),
