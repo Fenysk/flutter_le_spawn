@@ -13,14 +13,18 @@ class TabScreen extends StatefulWidget {
 class _TabScreenState extends State<TabScreen> {
   int _selectedPage = 0;
 
-  void _onTapAddGame() => {
-        showModalBottomSheet(
-          context: context,
-          builder: (modalContext) => const AddGameModal(),
-          useSafeArea: true,
-          clipBehavior: Clip.hardEdge,
-        )
-      };
+  void _onTapAddGame() {
+    showModalBottomSheet(
+      context: context,
+      builder: (modalContext) => const AddGameModal(),
+      useSafeArea: true,
+      clipBehavior: Clip.hardEdge,
+    );
+  }
+
+  void _onTapProfile() {
+    print('Profile page');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +51,17 @@ class _TabScreenState extends State<TabScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.primary,
         title: Image.asset(
           'assets/images/Logo_WB.png',
           width: 120,
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.account_circle),
+            iconSize: 32,
+            onPressed: _onTapProfile,
+          ),
+        ],
       ),
       body: mainContent,
       floatingActionButton: _selectedPage != 0

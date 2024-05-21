@@ -20,11 +20,30 @@ final theme = ThemeData(
     foregroundColor: AppColors.black,
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    selectedItemColor: AppColors.primary,
+    backgroundColor: AppColors.primary,
+    selectedItemColor: AppColors.white,
+    selectedIconTheme: IconThemeData(
+      color: AppColors.white,
+      shadows: [
+        Shadow(
+          color: AppColors.black,
+          offset: Offset(0, 2),
+        ),
+      ],
+    ),
     selectedLabelStyle: TextStyle(
       fontWeight: FontWeight.bold,
+      shadows: [
+        Shadow(
+          color: AppColors.black,
+          offset: Offset(0, 2),
+        ),
+      ],
     ),
     unselectedItemColor: AppColors.black,
+    unselectedIconTheme: IconThemeData(
+      color: AppColors.black,
+    ),
   ),
   textTheme: const TextTheme(
     titleLarge: TextStyle(
@@ -43,6 +62,18 @@ final theme = ThemeData(
   buttonTheme: const ButtonThemeData(
     buttonColor: AppColors.secondary,
     textTheme: ButtonTextTheme.primary,
+  ),
+  appBarTheme: const AppBarTheme(
+    color: AppColors.primary,
+    actionsIconTheme: IconThemeData(
+      color: AppColors.white,
+      shadows: [
+        Shadow(
+          color: AppColors.black,
+          offset: Offset(0, 2),
+        ),
+      ],
+    ),
   ),
 );
 
