@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:le_spawn/ui/screens/home_screen.dart';
-import 'package:le_spawn/utils/constants.dart';
-import 'package:le_spawn/ui/widgets/collection/game/add_game_modal.dart';
+import 'package:le_spawn/ui/screens/collection_screen.dart';
+import 'package:le_spawn/ui/widgets/game/add_vide_game_modal.dart';
 
 class TabScreen extends StatefulWidget {
   const TabScreen({super.key});
@@ -28,12 +27,12 @@ class _TabScreenState extends State<TabScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Widget mainContent = const HomeScreen();
+    Widget mainContent = const CollectionScreen();
 
     switch (_selectedPage) {
       case 0:
-        mainContent = const HomeScreen();
-        print('HomeScreen');
+        mainContent = const CollectionScreen();
+        print('CollectionScreen');
         break;
       case 1:
         mainContent = const Center(
