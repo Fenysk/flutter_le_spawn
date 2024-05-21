@@ -17,6 +17,8 @@ class _TabScreenState extends State<TabScreen> {
         showModalBottomSheet(
           context: context,
           builder: (modalContext) => const AddGameModal(),
+          useSafeArea: true,
+          clipBehavior: Clip.hardEdge,
         )
       };
 
@@ -52,12 +54,14 @@ class _TabScreenState extends State<TabScreen> {
         ),
       ),
       body: mainContent,
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: _onTapAddGame,
-        tooltip: 'Ajouter un jeu à votre collection',
-        icon: const Icon(Icons.add),
-        label: const Text('Ajouter un jeu'),
-      ),
+      floatingActionButton: _selectedPage != 0
+          ? null
+          : FloatingActionButton.extended(
+              onPressed: _onTapAddGame,
+              tooltip: 'Ajouter un jeu à votre collection',
+              icon: const Icon(Icons.add),
+              label: const Text('Ajouter un jeu'),
+            ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) => setState(() => _selectedPage = index),
