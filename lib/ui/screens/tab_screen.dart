@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:le_spawn/ui/screens/home_screen.dart';
 import 'package:le_spawn/utils/constants.dart';
+import 'package:le_spawn/ui/widgets/collection/game/add_game_modal.dart';
 
 class TabScreen extends StatefulWidget {
   const TabScreen({super.key});
@@ -12,7 +13,12 @@ class TabScreen extends StatefulWidget {
 class _TabScreenState extends State<TabScreen> {
   int _selectedPage = 0;
 
-  void _onTapAddGame() => print('Ajouter un jeu');
+  void _onTapAddGame() => {
+        showModalBottomSheet(
+          context: context,
+          builder: (modalContext) => const AddGameModal(),
+        )
+      };
 
   @override
   Widget build(BuildContext context) {
