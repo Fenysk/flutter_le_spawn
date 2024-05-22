@@ -77,12 +77,14 @@ class _TabScreenState extends State<TabScreen> {
         currentIndex: _selectedPage,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.collections),
+            icon: Icon(Icons.gamepad_outlined),
+            activeIcon: Icon(Icons.gamepad_rounded),
             label: 'Ma collection',
             tooltip: 'Accéder à votre collection de jeux-vidéo',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
+            icon: Icon(Icons.explore_outlined),
+            activeIcon: Icon(Icons.explore_rounded),
             label: 'Découvrir',
             tooltip: 'Découvrir la collection d\'autres joueurs',
           ),
