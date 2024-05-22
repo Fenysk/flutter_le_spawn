@@ -10,10 +10,24 @@ class VideoGameList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: videoGameList.length,
-      itemBuilder: (context, index) =>
-          VideoGameItem(videoGame: videoGameList[index]),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Jeux-vidéo',
+          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+        const SizedBox(height: 4),
+        Expanded(
+          child: ListView.builder(
+            itemCount: videoGameList.length,
+            itemBuilder: (context, index) =>
+                VideoGameItem(videoGame: videoGameList[index]),
+          ),
+        ),
+      ],
     );
   }
 }

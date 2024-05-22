@@ -52,11 +52,11 @@ final theme = ThemeData(
     ),
     titleMedium: TextStyle(
       fontSize: 16,
-      fontFamily: 'Grobold',
+      fontFamily: 'Acephimere',
     ),
     titleSmall: TextStyle(
       fontSize: 12,
-      fontFamily: 'Grobold',
+      fontFamily: 'Acephimere',
     ),
   ),
   buttonTheme: const ButtonThemeData(
