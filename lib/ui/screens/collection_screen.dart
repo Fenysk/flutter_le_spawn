@@ -9,9 +9,14 @@ class CollectionScreen extends StatefulWidget {
 }
 
 class _CollectionScreenState extends State<CollectionScreen> {
+  String appearance = 'list';
+
   void _onTapFilter() {
     print('Filter button tapped');
   }
+
+  void changeView() =>
+      setState(() => appearance = appearance == 'list' ? 'grid' : 'list');
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +37,22 @@ class _CollectionScreenState extends State<CollectionScreen> {
                 ),
               ),
               const Spacer(),
-              IconButton(
-                icon: const Icon(Icons.filter_list),
-                onPressed: _onTapFilter,
-              ),
+              Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.grid_view),
+                    onPressed: changeView,
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.filter_list),
+                    onPressed: _onTapFilter,
+                  ),
+                ],
+              )
             ],
           ),
           Expanded(
-            child: VideoGameList(),
+            child: VideoGameList(appearance: appearance),
           ),
         ],
       ),
