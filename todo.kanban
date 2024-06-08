@@ -1,0 +1,31 @@
+{
+  "lists": [
+    {
+      "id": "2793261a-ad19-4599-9130-00fc7e5bc4ab",
+      "title": "TO DO",
+      "cards": []
+    },
+    {
+      "id": "1283e84c-98f7-465a-82cd-d502752b0c44",
+      "title": "PRIORITY",
+      "cards": []
+    },
+    {
+      "id": "d103a355-9f7d-47fb-9c2e-f99ea1cf9086",
+      "title": "IN PROGRESS",
+      "cards": []
+    },
+    {
+      "id": "a7d71305-95c6-4316-8baf-327266d5d947",
+      "title": "DONE",
+      "cards": []
+    }
+  ],
+  "archive": {
+    "lists": [],
+    "cards": []
+  },
+  "settings": {
+    "labels": []
+  }
+}
