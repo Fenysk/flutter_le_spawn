@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:le_spawn/models/video_game.dart';
+import 'package:le_spawn/models/video_game_item.dart';
 
 class VideoGameItem extends StatelessWidget {
   const VideoGameItem({super.key, required this.videoGame, required this.apparence});
 
-  final VideoGame videoGame;
+  final VideoGameItemModel videoGame;
   final String apparence;
 
   @override
@@ -15,9 +15,13 @@ class VideoGameItem extends StatelessWidget {
       case 'list':
         mainContent = ListTile(
           contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-          leading: Image(image: NetworkImage(videoGame.mainPhoto)),
-          title: Text(videoGame.title, overflow: TextOverflow.ellipsis),
-          subtitle: Text(videoGame.edition),
+          leading: FadeInImage.assetNetwork(
+            placeholder: 'assets/images/placeholder.webp',
+            image: videoGame.VideoGame.images[0],
+            imageErrorBuilder: (context, error, stackTrace) => Image.asset('assets/images/placeholder.webp'),
+          ),
+          title: Text(videoGame.VideoGame.title, overflow: TextOverflow.ellipsis),
+          subtitle: Text('${videoGame.edition} · ${videoGame.region} · ${videoGame.VideoGame.Platform.name}'),
           trailing: const Icon(Icons.arrow_forward_ios),
         );
         break;
@@ -27,11 +31,10 @@ class VideoGameItem extends StatelessWidget {
           clipBehavior: Clip.hardEdge,
           child: Stack(
             children: [
-              Image(
-                image: NetworkImage(videoGame.mainPhoto),
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: double.infinity,
+              FadeInImage.assetNetwork(
+                placeholder: 'assets/images/placeholder.webp',
+                image: videoGame.VideoGame.images[0],
+                imageErrorBuilder: (context, error, stackTrace) => Image.asset('assets/images/placeholder.webp'),
               ),
               Positioned.fill(
                 child: DecoratedBox(
@@ -56,7 +59,7 @@ class VideoGameItem extends StatelessWidget {
                     maxWidth: 120,
                   ),
                   child: Text(
-                    videoGame.title,
+                    videoGame.VideoGame.title,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(

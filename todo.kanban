@@ -3,7 +3,26 @@
     {
       "id": "2793261a-ad19-4599-9130-00fc7e5bc4ab",
       "title": "TO DO",
-      "cards": []
+      "cards": [
+        {
+          "id": "d47d4d22-4bf9-4519-822b-3162d864dcd3",
+          "listId": "2793261a-ad19-4599-9130-00fc7e5bc4ab",
+          "title": "Connect with database with service",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "bf5c328c-e016-4a0b-a77e-77ce22d56b81",
+          "listId": "2793261a-ad19-4599-9130-00fc7e5bc4ab",
+          "title": "Fix UI in cards (grid and list)",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
     },
     {
       "id": "1283e84c-98f7-465a-82cd-d502752b0c44",
@@ -13,7 +32,17 @@
     {
       "id": "d103a355-9f7d-47fb-9c2e-f99ea1cf9086",
       "title": "IN PROGRESS",
-      "cards": []
+      "cards": [
+        {
+          "id": "7fdf17b4-9dde-443c-b68e-338bbd42086d",
+          "listId": "d103a355-9f7d-47fb-9c2e-f99ea1cf9086",
+          "title": "Make card game details",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
     },
     {
       "id": "a7d71305-95c6-4316-8baf-327266d5d947",

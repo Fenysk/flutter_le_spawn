@@ -1,23 +1,35 @@
-class VideoGame {
-  VideoGame({
-    required this.title,
-    required this.edition,
-    required this.region,
-    required this.mainPhoto,
-    required this.platform,
-    this.description,
-    this.initialPurchasePrice,
-    this.negotiatedPrice,
-    this.currentMarketValue,
-  });
+import 'package:le_spawn/models/platforms.dart';
+import 'package:le_spawn/data/platform_data.dart';
 
+class VideoGameModel {
+  VideoGameModel({
+    required this.id,
+    required this.title,
+    this.description,
+    required this.genres,
+    required this.images,
+    required this.releaseYear,
+    this.editor,
+    this.publisher,
+    this.developer,
+    required this.maxLocalMultiplayer,
+    required this.maxOnlineMultiplayer,
+    required this.platformId,
+  }) {
+    Platform = platformData.firstWhere((platform) => platform.id == platformId);
+  }
+
+  final String id;
   final String title;
   final String? description;
-  final String edition;
-  final String region;
-  final String platform;
-  final String mainPhoto;
-  final double? initialPurchasePrice;
-  final double? negotiatedPrice;
-  final double? currentMarketValue;
+  final List<String> genres;
+  final List<String> images;
+  final int releaseYear;
+  final String? editor;
+  final String? publisher;
+  final String? developer;
+  final int maxLocalMultiplayer;
+  final int maxOnlineMultiplayer;
+  final String platformId;
+  late final PlatformModel Platform;
 }
