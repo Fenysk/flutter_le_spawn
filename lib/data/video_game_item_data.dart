@@ -1,11 +1,14 @@
 import 'package:le_spawn/models/video_game_item.dart';
+import 'package:le_spawn/models/video_game_item_content.dart';
 
 final videoGameItemData = [
   VideoGameItemModel(
     id: "vgit_4a6a14fa330",
     edition: "Standard",
     photos: [
-      "https://img.leboncoin.fr/api/v1/lbcpb1/images/ce/a8/92/cea89283a20b0e1913ed6693e4209528b082ff01.jpg?rule=classified-1200x800-webp"
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/7f/09/54/7f095484e566ee8a00d7747bc9663798420f80b9.jpg?rule=ad-large",
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/ee/8e/09/ee8e09143b88253d0abbf2ab20e55ee532d7b11f.jpg?rule=ad-large",
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/db/37/d4/db37d42afc85045fe3706213fa9d00948338054a.jpg?rule=ad-large",
     ],
     note: null,
     purchasedPrice: null,
@@ -20,13 +23,31 @@ final videoGameItemData = [
     updatedAt: DateTime.parse("2024-06-08T16:49:16.235Z"),
     videoGameId: "vdgm_53a58bff484",
     collectionId: "clcn_2242ced1",
-    Content: [],
+    Content: [
+      VideoGameItemContentModel(
+        name: 'Boîte',
+        photos: [],
+        state: 'MINT',
+      ),
+      VideoGameItemContentModel(
+        name: 'Jeu',
+        photos: [],
+        state: 'MINT',
+      ),
+      VideoGameItemContentModel(
+        name: 'Notice',
+        photos: [],
+        state: 'GOOD',
+      ),
+    ],
   ),
   VideoGameItemModel(
     id: "vgit_794eb963fc0",
     edition: "Standard",
     photos: [
-      "https://img.leboncoin.fr/api/v1/lbcpb1/images/07/af/7d/07af7d7d5f0f807dcf91595fdf5183c7f280766c.jpg?rule=classified-1200x800-webp"
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/07/af/7d/07af7d7d5f0f807dcf91595fdf5183c7f280766c.jpg?rule=classified-1200x800-webp",
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/07/af/7d/07af7d7d5f0f807dcf91595fdf5183c7f280766c.jpg?rule=classified-1200x800-webp",
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/07/af/7d/07af7d7d5f0f807dcf91595fdf5183c7f280766c.jpg?rule=classified-1200x800-webp",
     ],
     note: null,
     purchasedPrice: null,
@@ -41,13 +62,20 @@ final videoGameItemData = [
     updatedAt: DateTime.parse("2024-06-08T17:09:49.730Z"),
     videoGameId: "vdgm_30e06f6f56a",
     collectionId: "clcn_2242ced1",
-    Content: [],
+    Content: [
+      VideoGameItemContentModel(
+        name: 'Jeu',
+        photos: [],
+        state: 'GOOD',
+      ),
+    ],
   ),
   VideoGameItemModel(
     id: "vgit_07d8f61e927",
     edition: "Standard",
     photos: [
-      "https://m.media-amazon.com/images/I/61WDvKg7g9L._AC_UF1000,1000_QL80_.jpg"
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/eb/ec/ab/ebecabf6aa5d6e3e2d34718234b967e7c342a6ee.jpg?rule=ad-large",
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/81/08/73/810873f0a186b68bb0a01c1a3c23c7fae9ecb30e.jpg?rule=ad-large",
     ],
     note: null,
     purchasedPrice: null,
@@ -62,13 +90,21 @@ final videoGameItemData = [
     updatedAt: DateTime.parse("2024-06-08T17:31:43.438Z"),
     videoGameId: "vdgm_ad33aa9664e",
     collectionId: "clcn_2242ced1",
-    Content: [],
+    Content: [
+      VideoGameItemContentModel(
+        name: 'Jeu',
+        photos: [],
+        state: 'MINT',
+      ),
+    ],
   ),
   VideoGameItemModel(
     id: "vgit_5g8f2s3d8v9a",
     edition: "Standard",
     photos: [
-      "https://m.media-amazon.com/images/I/61WDvKg7g9L._AC_UF1000,1000_QL80_.jpg"
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/cc/42/a2/cc42a257f775521b07f9eda5fc330bd5ae962b3f.jpg?rule=ad-large",
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/95/be/35/95be35e7ae85af0264b6beacd4b8c41019d2c41e.jpg?rule=ad-large",
+      "https://img.leboncoin.fr/api/v1/lbcpb1/images/36/a3/f8/36a3f8e2d1bf00539fc42bea366f2446cd93fda1.jpg?rule=ad-large",
     ],
     note: null,
     purchasedPrice: null,
@@ -83,6 +119,17 @@ final videoGameItemData = [
     updatedAt: DateTime.parse("2024-06-08T17:31:43.438Z"),
     videoGameId: 'vdgm_a16f17c4646',
     collectionId: "clcn_2242ced1",
-    Content: [],
+    Content: [
+      VideoGameItemContentModel(
+        name: 'Boîte',
+        photos: [],
+        state: 'GOOD',
+      ),
+      VideoGameItemContentModel(
+        name: 'Jeu',
+        photos: [],
+        state: 'MINT',
+      ),
+    ],
   )
 ];

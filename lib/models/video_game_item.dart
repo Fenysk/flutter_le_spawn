@@ -20,7 +20,7 @@ class VideoGameItemModel {
     required this.updatedAt,
     required this.videoGameId,
     required this.collectionId,
-    this.Content,
+    required this.Content,
   }) {
     VideoGame = videoGameData.firstWhere((game) => game.id == videoGameId);
   }
@@ -41,6 +41,6 @@ class VideoGameItemModel {
   final DateTime updatedAt;
   final String videoGameId;
   final String collectionId;
-  final List<VideoGameItemContentModel>? Content;
+  final List<VideoGameItemContentModel> Content;
   late final VideoGameModel VideoGame;
 }

@@ -29,7 +29,7 @@ class VideoGameList extends StatelessWidget {
               child: ListView.builder(
                 itemCount: videoGameList.length,
                 itemBuilder: (context, index) => VideoGameItem(
-                  videoGame: videoGameList[index],
+                  videoGameItem: videoGameList[index],
                   apparence: appearance,
                 ),
               ),
@@ -57,7 +57,7 @@ class VideoGameList extends StatelessWidget {
                 ),
                 itemCount: videoGameList.length,
                 itemBuilder: (context, index) => VideoGameItem(
-                  videoGame: videoGameList[index],
+                  videoGameItem: videoGameList[index],
                   apparence: appearance,
                 ),
               ),
